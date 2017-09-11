@@ -13,15 +13,29 @@
 
   <body>
     <div class="container">
-      <header class="header">
-        <nav role="navigation">
-          <ul class="nav nav-pills pull-right">
-            <li><a href="http://www.phoenixframework.org/docs">Get Started</a></li>
-          </ul>
-        </nav>
-        <span class="logo"></span>
-      </header>
+      <nav class="navbar">
+        <div class="navbar-brand">
+          <a a class="nav-item is-brand" href="/">
+            SumoShop!
+          </a>
 
+          <div class="navbar-burger burger" data-target="navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+
+        <div id="navbar-menu" class="navbar-menu">
+          <div class="navbar-end">
+            <a class="navbar-item is-hidden is-tab" href="/">Home</a>
+            <a class="navbar-item is-tab" href="#/features">Products</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
       <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
       <p class="alert alert-danger" role="alert"><%= get_flash(@conn, :error) %></p>
 

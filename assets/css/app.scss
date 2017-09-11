@@ -1,5 +1,7 @@
+@charset "utf-8";
 
+@import 'modules/variables';
+@import '~bulma';
 
-body {
-  color: red;
-}
+@import 'modules/base';
+@import 'components/components';

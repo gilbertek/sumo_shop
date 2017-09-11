@@ -78,8 +78,6 @@ module.exports = __webpack_require__(2);
 "use strict";
 
 
-alert("This is loaded with webpack");
-
 /***/ }),
 /* 2 */
 /***/ (function(module, exports) {

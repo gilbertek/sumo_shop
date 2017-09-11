@@ -1,0 +1,55 @@
+/* =========================================================================== */
+/* 1. Custom Fonts, defined in fonts.scss
+/* =========================================================================== */
+$open-sans: 'Open Sans';
+$news-cycle: 'News Cycle';
+$arial-narrow-bold: 'Arial Narrow Bold';
+
+/* =========================================================================== */
+/* 2. Typography
+/* =========================================================================== */
+$family-heading: $news-cycle, $arial-narrow-bold, sans-serif;
+
+$base-font-family: $open-sans, sans-serif;
+$heading-font-family: $news-cycle, sans-serif;
+// Font Sizes
+$base-font-size: 1em;
+
+// Line height
+$base-line-height: 1.5;
+$heading-line-height: 1.2;
+
+// Other Sizes
+$base-border-radius: 3px;
+$base-spacing: $base-line-height * 1em;
+$small-spacing: $base-spacing / 2;
+$base-z-index: 0;
+
+/* =========================================================================== */
+/* 2. Colors
+/* =========================================================================== */
+$light-gray: #fff;
+$dark-grey: #1e1f20;
+$pink: #f16162 !default;
+$white: #fff;
+$dark-white: rgba(255, 255, 255, .8);
+$darken-gray: rgba(0,0,0,.7);
+
+/* =========================================================================== */
+/* 3. Animations
+/* =========================================================================== */
+$base-duration: 150ms;
+$base-timing: ease;
+
+/* =========================================================================== */
+/* 4. Border
+/* =========================================================================== */
+$base-border-color: $light-gray;
+$base-border: 1px solid $base-border-color;
+
+/* =========================================================================== */
+/* 5. Import Bulma after having set your variables
+/* =========================================================================== */
+$family-primary: $base-font-family; // Use the new serif family
+$danger: $pink !default;
+

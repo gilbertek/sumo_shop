@@ -29,7 +29,7 @@
         <div id="navbar-menu" class="navbar-menu">
           <div class="navbar-end">
             <a class="navbar-item is-hidden is-tab" href="/">Home</a>
-            <a class="navbar-item is-tab" href="#/features">Products</a>
+            <a class="navbar-item is-tab" href="/products">Products</a>
           </div>
         </div>
       </nav>

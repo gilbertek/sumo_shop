@@ -67,7 +67,7 @@ module.exports = {
     new ExtractTextPlugin('css/app.css'),
     // We copy our images and fonts to the output folder
     new CopyWebpackPlugin([
-      { from: './static/images', to: 'images' },
+      { from: __dirname + '/static/images', to: 'images' },
       { from: 'node_modules/font-awesome/fonts', to: 'fonts/' }
     ])
   ]

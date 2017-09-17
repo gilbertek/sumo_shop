@@ -7,6 +7,7 @@ defmodule SumoShop.Inventories do
   alias SumoShop.Repo
 
   alias SumoShop.Inventories.Product
+  alias SumoShop.Assets.Asset
 
   @doc """
   Returns the list of products.
@@ -19,6 +20,8 @@ defmodule SumoShop.Inventories do
   """
   def list_products do
     Repo.all(Product)
+    |> Repo.preload(:assets)
+
   end
 
   @doc """

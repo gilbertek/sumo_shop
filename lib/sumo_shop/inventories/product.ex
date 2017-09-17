@@ -2,6 +2,7 @@ defmodule SumoShop.Inventories.Product do
   use Ecto.Schema
   import Ecto.Changeset
   alias SumoShop.Inventories.Product
+  alias SumoShop.Assets.Asset
 
 
   schema "products" do
@@ -10,6 +11,8 @@ defmodule SumoShop.Inventories.Product do
     field :quantity, :integer
     field :status, :integer
     field :upc, :string
+
+    has_many :assets, {"product_assets", Asset}, foreign_key: :assoc_id
 
     timestamps()
   end

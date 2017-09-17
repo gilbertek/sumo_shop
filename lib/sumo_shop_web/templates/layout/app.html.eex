@@ -15,9 +15,11 @@
     <div class="container">
       <nav class="navbar">
         <div class="navbar-brand">
-          <a a class="nav-item is-brand" href="/">
-            SumoShop!
-          </a>
+          <h1>
+            <a a class="navbar-item is-brand" href="/">
+              SumoShop!
+            </a>
+          </h1>
 
           <div class="navbar-burger burger" data-target="navigation">
             <span></span>
@@ -30,20 +32,32 @@
           <div class="navbar-end">
             <a class="navbar-item is-hidden is-tab" href="/">Home</a>
             <a class="navbar-item is-tab" href="/products">Products</a>
+            <a class="navbar-item is-tab" href="#/products">Cart</a>
           </div>
         </div>
       </nav>
     </div>
 
     <div class="container">
-      <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
-      <p class="alert alert-danger" role="alert"><%= get_flash(@conn, :error) %></p>
+      <%= if get_flash(@conn, :info) do %>
+        <p class="notification is-success" role="alert">
+          <%= get_flash(@conn, :info) %>
+        </p>
+      <%= end %>
+
+      <%= if get_flash(@conn, :error) do %>
+        <p class="notification is-danger" role="alert">
+          <%= get_flash(@conn, :error) %>
+        </p>
+      <%= end %>
 
       <main role="main">
         <%= render @view_module, @view_template, assigns %>
       </main>
 
     </div> <!-- /container -->
+    <footer class="footer" role="contentinfo">
+    </footer>
     <script src="<%= static_path(@conn, "/js/app.js") %>"></script>
   </body>
 </html>

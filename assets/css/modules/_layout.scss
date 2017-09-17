@@ -1,0 +1,26 @@
+.navbar {
+  font-family: $heading-font-family;
+  height: 76px;
+  margin-bottom: 20px;
+  transform: translate3d(auto, auto, 0);
+  transition: all .2s ease;
+  transition-property: background, box-shadow;
+  z-index: 2;
+
+  .navbar-brand {
+    font-size: 2em;
+    font-weight: 900;
+  }
+
+  a:not(.button) {
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+
+  .navbar-item {
+    .button {
+      border-radius: 0;
+      text-transform: uppercase;
+    }
+  }
+}

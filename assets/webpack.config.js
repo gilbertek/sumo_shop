@@ -46,6 +46,14 @@ module.exports = {
           use: 'css-loader!sass-loader!import-glob-loader',
           fallback: 'style-loader'
         })
+      },
+      {
+        test: /\.(png|jpg|gif|svg)$/,
+        loader: 'file-loader?name=/images/[name].[ext]'
+      },
+      {
+        test: /\.(ttf|eot|svg|woff2?)$/,
+        loader: 'file-loader?name=/fonts/[name].[ext]'
       }
     ]
   },
@@ -58,6 +66,9 @@ module.exports = {
     }),
     new ExtractTextPlugin('css/app.css'),
     // We copy our images and fonts to the output folder
-    new CopyWebpackPlugin([{ from: './static/images', to: 'images' }])
+    new CopyWebpackPlugin([
+      { from: './static/images', to: 'images' },
+      { from: 'node_modules/font-awesome/fonts', to: 'fonts/' }
+    ])
   ]
 };

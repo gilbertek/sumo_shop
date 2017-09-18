@@ -24,14 +24,14 @@ end
 
 1..25
 |> Enum.map(fn(x) ->
-    upc = :rand.normal(x, x)
+    upc = :rand.normal
     p = H.first_or_create(
       Product,
       %Product{name: "Product #{x}",
         description: "Awesome product #{x}",
         quantity: 5,
         status: 1,
-        upc: "#{upc}"}
+        upc: "#{upc}.#{x}"}
     )
 end)
 

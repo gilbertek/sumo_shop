@@ -61,9 +61,6 @@ config :logger, level: :info
 #     config :sumo_shop, SumoShopWeb.Endpoint, server: true
 #
 
-# Finally import the config/prod.secret.exs
-# which should be versioned separately.
-
 config :sumo_shop, SumoShop.Repo,
   adapter: Ecto.Adapters.Postgres,
   url: System.get_env("DATABASE_URL"),

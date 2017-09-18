@@ -1,3 +1,2 @@
-info "Building Phoenix static assets"
+info "====> Building Phoenix static assets"
 webpack
-mix phx.digest

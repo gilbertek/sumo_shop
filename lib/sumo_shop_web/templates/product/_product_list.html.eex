@@ -4,14 +4,21 @@
       <%= for product <- group_products do %>
         <div class="column">
         <div class="card">
-          <div class="card-image">
-            <figure class="image is-4by3">
-              <img src="http://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
-            </figure>
-          </div>
+          <%= link(to: product_path(@conn, :show, product.id), class: "list-group-item") do %>
+            <div class="card-image">
+              <figure class="image is-4by3">
+                <img src="http://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+              </figure>
+            </div>
+          <% end %>
+
           <div class="card-content">
             <div class="content">
-              <h2> <%= product.name %> </h2>
+              <%= link(
+                      to: product_path(@conn, :show, product.id),
+                      class: "list-group-item") do %>
+                  <h2> <%= product.name %> </h2>
+                <% end %>
 
               <p> <%= product.description %> </p>
 

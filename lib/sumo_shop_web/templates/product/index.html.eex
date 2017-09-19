@@ -1,5 +1,6 @@
 <%= render(
         SumoShopWeb.ProductView,
         "_product_list.html",
+        conn: @conn,
         products: @products)
 %>

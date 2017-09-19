@@ -5,6 +5,8 @@ defmodule SumoShopWeb.PageController do
 
   def index(conn, _params) do
     products = Inventories.list_products()
-    render conn, "index.html", products: products
+    conn
+    |> assign(:products, products)
+    |> render("index.html")
   end
 end

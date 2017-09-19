@@ -6,7 +6,9 @@ defmodule SumoShopWeb.ProductController do
 
   def index(conn, _params) do
     products = Inventories.list_products()
-    render(conn, "index.html", products: products)
+    conn
+    |> assign(:products, products)
+    |> render("index.html")
   end
 
   def new(conn, _params) do

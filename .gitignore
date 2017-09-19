@@ -13,7 +13,7 @@ erl_crash.dump
 
 # Generated on crash by NPM or Yarn
 npm-debug.log
-yarn-log*
+yarn-error.log
 
 # Since we are building assets from assets/,
 # we ignore priv/static. You may want to comment

@@ -1,33 +1,27 @@
-<h2>Show Product</h2>
+<div class="columns">
+  <div class="column">
+    <figure class="image is-4by3">
+      <img src="http://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+    </figure>
+  </div>
 
+  <div class="column">
+    <h2 class="title">
+      <%= @product.name %>
+    </h2>
+
+    <strong>$5</strong>
+
+    <blockquote>
+      <%= @product.description %>
+    </blockquote>
+
+    <div class="column">
+      <a
+        class="button is-primary"
+        href="#">Add to Card</a>
+    </div>
+  </div>
+</div>
 <ul>
 
-  <li>
-    <strong>Name:</strong>
-    <%= @product.name %>
-  </li>
-
-  <li>
-    <strong>Description:</strong>
-    <%= @product.description %>
-  </li>
-
-  <li>
-    <strong>Upc:</strong>
-    <%= @product.upc %>
-  </li>
-
-  <li>
-    <strong>Status:</strong>
-    <%= @product.status %>
-  </li>
-
-  <li>
-    <strong>Quantity:</strong>
-    <%= @product.quantity %>
-  </li>
-
-</ul>
-
-<span><%= link "Edit", to: product_path(@conn, :edit, @product) %></span>
-<span><%= link "Back", to: product_path(@conn, :index) %></span>

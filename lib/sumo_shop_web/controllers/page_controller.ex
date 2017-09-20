@@ -3,7 +3,6 @@ defmodule SumoShopWeb.PageController do
 
   alias SumoShop.Inventories
 
-  # TODO: test
   def index(conn, _params) do
     products = Inventories.list_products()
     conn

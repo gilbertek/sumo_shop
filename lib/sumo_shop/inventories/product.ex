@@ -1,4 +1,6 @@
 defmodule SumoShop.Inventories.Product do
+  @moduledoc false
+
   use Ecto.Schema
   import Ecto.Changeset
   alias SumoShop.Inventories.Product

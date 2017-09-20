@@ -1,4 +1,6 @@
 defmodule SumoShop.Assets.Asset do
+  @moduledoc false
+
   use Ecto.Schema
   import Ecto.Changeset
   alias SumoShop.Assets.Asset

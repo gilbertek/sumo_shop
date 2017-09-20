@@ -19,9 +19,10 @@ defmodule SumoShop.Inventories do
 
   """
   def list_products do
-    Repo.all(Product)
-    |> Repo.preload(:assets)
+    changeset = Repo.all(Product)
 
+    changeset
+    |> Repo.preload(:assets)
   end
 
   @doc """

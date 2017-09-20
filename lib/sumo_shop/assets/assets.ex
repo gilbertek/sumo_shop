@@ -107,7 +107,9 @@ defmodule SumoShop.Assets do
   Insert asset
   """
   def add_asset(module, attrs \\ %{}) do
-    Ecto.build_assoc(module, :assets)
+    changeset = Ecto.build_assoc(module, :assets)
+
+    changeset
     |> Asset.changeset(attrs)
     |> Repo.insert()
   end
